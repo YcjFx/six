@@ -1,0 +1,19 @@
+<!--my.wxml-->
+<text>我的</text>
+<text>\n</text>
+<image  class="userimage" src="{{userimage}}" ></image>
+<text class="userinfo-id">用户5567389087</text>
+
+
+<button bindtap="collectPage" style="display:flex;flex-direction:row;" class="button_collect">
+  <image style="flex:1;"class="my-image" bindtap='collectPage'src="{{collectimg}}"></image>
+  <view style="flex:2;"></view>
+  <text style="flex:3;" class="my-text">收藏</text>
+</button>
+
+<button class="button_mywork" bindtap="workPage"  style="display:flex;flex-direction:row;">
+  <image style="flex:1;" class="my-image" src="{{workimg}}"></image>
+  <view style="flex:2;"></view>
+  <text style="flex:3;"class="my-text">我的推荐</text>
+</button>
+

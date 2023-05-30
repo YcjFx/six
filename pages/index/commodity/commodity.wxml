@@ -1,0 +1,67 @@
+<!--pages/commodity/commodity.wxml-->
+<text>\n</text>
+<text class="page-title">商品详情\n</text>
+<image class="commodity-image" src="{{commodityData.comImageSrc}}"></image>
+<text>\n</text>
+<text class="commodity-price" >{{commodityData.comName}}</text>
+<text class="commodity-price" >{{commodityData.comPrice}}</text>
+<text>￥</text>
+<text>\n</text>
+
+<text class="commodity-eshop">{{commodityData.comShop}}</text>
+<text>\n</text>
+
+<view>
+  <image class="commodity-worker" src="{{imagework}}"></image>
+  <text class="worker-text">发布人：</text>
+  <text class="userid-text">{{commodityData.comWriter}}</text>
+</view>
+
+<text class="commodity-desc">{{commodityData.comDesc}}</text>
+<text>\n</text>
+
+<text class="commodity-comment"></text>
+<text>\n</text>
+
+
+
+<view class="value-buttons" style="display:flex;flex-direction:row;">
+ <button bindtap="disableButtons" class="btn {{disabled ? 'btn-disabled' : ''}}" style="flex:3;" disabled="{{disabled}}" data-index="1">值</button>
+ <view style="flex:1;"></view>
+
+ <button bindtap="disableButtons" class="btn {{disabled ? 'btn-disabled' : ''}}" style="flex:3;" disabled="{{disabled}}" data-index="2">不值</button>
+</view>
+<view class="value-radio" style="display:flex;flex-direction:row;">
+ <text class="is-radio" style="flex:1;text-align: center;">{{isRadio}}</text>
+ <text class="isnot-radio" style="flex:1;text-align: center;">{{notRadio}}</text>
+</view>
+
+
+
+<view class="imageandbutton" style="display:flex;flex-direction:row;">
+  <view  style="flex:5;" > </view>
+  <text style="flex:2;">收藏</text>
+  <image class="collect-flag" style="flex:1;" src="{{imageCollect}}" bindtap="onCollectTap"></image>
+  <view  style="flex:1;" > </view>
+  <button class="url-button" bindtap="onNavigateToW" style="flex:2;">前往购买</button>
+</view>
+
+
+
+<!-- 评论区 -->
+<text>\n</text>
+<image class="comment-flag" style="flex:1;" src="{{imageComment}}"></image>
+<text class="commodity-comment-text">评论 (2)</text>
+<text>\n</text>
+
+<scroll-view scroll-y="true" style="height: 500rpx;">
+  <view wx:for="{{comments}}" wx:key="index">
+    <text class="comment-text">{{item}}</text>
+  </view>
+  
+</scroll-view>
+
+<view class="input-box">
+  <input class="comment-input" placeholder="请输入评论" bindinput="onInput"></input>
+  <button class="input-button" bindtap="onSubmit">发表</button>
+</view>

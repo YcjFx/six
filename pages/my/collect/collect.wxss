@@ -1,0 +1,104 @@
+/* pages/page1/page1.wxss */
+.container {
+  background-color: #d7eff1;
+}
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  padding: 50rpx 0;
+  align-items: center;
+  background: #d7eff1;
+}
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+.userinfo-nickname {
+  color: #333;
+}
+.weui_cell{
+    position: relative;
+    display: flex;
+    padding: 15px;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    border-bottom: 1px solid #dadada;
+}
+.weui_cell_hd{
+  display: inline-block;
+  width: 20px;
+  margin-right: 5px;
+}
+.weui_cell_hd image{
+  width: 100%;
+  height: 20px;
+  vertical-align: -2px;
+}
+.weui_cell_bd{
+  display: inline-block;
+}
+.rectext{
+  position: fixed;
+  left: 50;
+  right: 50;
+  bottom: 60%;
+  top: 60%;
+  font-size: 25px;
+  color: #939393;
+}
+
+.recInfo{
+  position: absolute;
+  top: 180px;
+  right: 120px;
+  width: 150px;
+  height: 150px;
+}
+/* 数据列表 */
+.list-container {
+  width: 100%;
+  height: 100%;
+  margin-top: 10px;
+}
+
+.list-item {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 80px;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.item-image {
+  width: 80px;
+  height: 80px;
+  margin-right: 10px;
+}
+
+.item-text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.item-title {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.item-price {
+  font-size: 14px;
+  color: rgb(233, 162, 10);
+}
+
+.item-eshop {
+  font-size: 14px;
+  color: #999;
+}

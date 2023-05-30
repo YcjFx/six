@@ -1,0 +1,100 @@
+/* pages/home/home.wxss */
+
+.commodity-image {
+  width: 120px;
+  height: 120px;
+  margin-left: 70px;
+  margin-top: 20px;
+  justify-content: center;
+}
+
+.commodity-worker{
+  width: 30px;
+  height: 30px;
+  margin-left: 5px;
+  margin-top: 5px;
+  justify-content: center;
+}
+.worker-text{
+  font-size: 13px;
+  color: gray;
+}
+
+.userid-text{
+  font-size: 13px;
+  color: gray;
+}
+
+
+
+.commodity-desc{
+  font-size: 14px;
+  color: black;
+}
+
+.commodity-comment{
+  font-size: 12px;
+  color: gray;
+}
+
+
+.is-value {
+  width: 40px;
+  height: 30px;
+  font-size: 12px;
+  margin-left: 10px;
+  margin-top: 10px;
+  justify-content: center;
+  background-color: yellowgreen;
+}
+
+.isnot-value {
+  width: 40px;
+  height: 30px;
+  font-size: 12px;
+  margin-left: 10px;
+  margin-top: 10px;
+  background-color: gray;
+}
+
+
+.imageandbutton{
+  width: 95%;
+  height: 30px;
+  margin-left: 5px;
+}
+
+.comment-flag{
+  width: 20px;
+  height: 25px;
+}
+
+.collect-flag{
+  width: 17px;
+  height: 23px;
+}
+
+
+.url-button{
+  width: 50px;
+  height: 30px;
+  margin-right: 10px;
+  font-size: 10px;
+  background-color: yellowgreen;
+}
+
+
+.comment-text{
+  font-size: 11px;
+  color: gray;
+}
+
+.comment-input{
+  font-size: 12px;
+  color: gray;
+}
+
+.input-button{
+  background-color: green;
+  font-size: 13px;
+}

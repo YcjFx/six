@@ -1,0 +1,65 @@
+/* pages/log_in/log_in.wxss */
+
+.logo{
+  position: absolute;
+  left: 36%;
+  top: 3%;
+  text-align: center;
+  width: 200rpx;
+  height: 200rpx;
+}
+/*Hello*/
+.text1{
+  color: black;
+  font-size: 50rpx;
+  position: absolute;
+  left: 40%;
+  top: 27%;
+  text-align: center;
+}
+
+.text2{
+  color: black;
+  font-size: 35rpx;
+  position: absolute;
+  left: 30%;
+  top: 35%;
+  text-align: center;
+}
+
+.log{
+  position: absolute;
+  top: 45%;
+  left: 100rpx; 
+  width: 545rpx;
+  height: 100rpx; 
+  background: #537FF2;
+  border-radius: 10rpx;
+}
+
+.btn{
+  color: white;
+  font-size: 35rpx;
+  position: absolute;
+  left: 25%;
+  top: 45%;
+  text-align: center;
+}
+
+
+
+
+.button-xy{
+  background-color: greenyellow;
+  margin-top: 350px;
+  margin-left: 20%;
+ 
+}
+/* 协议文本 */
+.text-xy{
+  color:gray;
+  font-size: 11px;
+  margin-top: 5px;
+  margin-left: 100px;
+  text-align: center;
+}

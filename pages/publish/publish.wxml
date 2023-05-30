@@ -1,0 +1,47 @@
+<!--pages/publish/publish.wxml-->
+<!--首行取消和发布项-->
+<view class="container1" style="display:flex;flex-direction:row;">
+    <button class="cancel" bindtap="onNavigateBack" style="flex:1;">取消</button>
+    <view  style="flex:2;" > </view>
+    <button class="fabu" bindtap="onSubmit" style="flex:1;">发布</button>
+</view>
+
+<!--商品名称输入框-->
+<view class="container2">
+  <input placeholder="  请输入商品名称" bindinput="onInputName" />
+</view>
+
+<!--商品链接输入框-->
+<view class="container3">
+  <input placeholder="  请输入商品链接" bindinput="onInputUrl"/>
+</view>
+
+<!--商品详情输入框-->
+<view class="container4">
+  <input placeholder="  请输入详情..." bindinput="onInputDesc"/>
+</view>
+
+<!--上传图片-->
+<view class="upload" bindtap="chooseImage">
+  <text class="upload_text">+</text>
+  <text > \n </text>
+</view>
+<text class="fuzhu_text">添加优质,首图更吸引人~</text>
+
+
+<!--价格-->
+<view class="price" style="display:flex;flex-direction:row;">
+  <image style="flex:1;" class="tubiao" src="/images/价格.png"></image>
+  <text style="flex:6;" class="wenzi">价格</text>
+  <input style="flex:6;" class="number" type="digit" bindinput="onInputPrice"placeholder-style="color:orange" 
+placeholder="0.00" />
+</view>
+
+<!--分类-->
+<view class="classify" style="display:flex;flex-direction:row;">
+  <image style="flex:1;" class="tubiao" src="/images/分类.png"></image>
+  <text style="flex:10;" class="wenzi">商店</text>
+  <!-- 输入商店 -->
+  <input placeholder="请输入商店地址" bindinput="onInputShop" class='shop' />
+</view>
+

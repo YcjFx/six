@@ -1,0 +1,27 @@
+<!--index.wxml-->
+
+<view class="search-box">
+  <input class="search-input" placeholder="请输入搜索内容" bindinput="onInputChange"/>
+  <button class="search-btn" bindtap="onSearch">搜索</button>
+</view>
+
+<scroll-view class="menu-bar" scroll-x="true">
+  <view class="menu-item {{currentTab == 0 ? 'active' : ''}}" bindtap="switchTab" data-tab="0">综合</view>
+  <!-- <view class="menu-item {{currentTab == 1 ? 'active' : ''}}" bindtap="switchTab" data-tab="1">选项二</view>
+  <view class="menu-item {{currentTab == 2 ? 'active' : ''}}" bindtap="switchTab" data-tab="2">选项三</view> -->
+</scroll-view>
+
+
+<!-- 数据列表 -->
+<scroll-view class="list-container" scroll-y="true">
+  <view bindtap="shopPage" class="list-item" wx:for="{{list}}" wx:key="index" data-index="{{index}}">
+    <image class="item-image"  src="{{item.imageSrc}}"></image>
+    <view class="item-text">
+      <text class="item-title">{{item.title}}</text>
+      <text class="item-price">{{item.price}}</text>
+      <text class="item-eshop">{{item.eshop}}</text>
+    </view>
+  </view>
+</scroll-view>
+
+

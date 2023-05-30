@@ -1,0 +1,18 @@
+<!--pages/log_in/log_in.wxml-->
+
+<image class="logo" src="/images/logo.jpg"></image>
+
+<text class="text1">Hello</text>
+
+<text class="text2">欢迎使用暨大值得买</text>
+
+
+<button bindtap="onLogin" class="button-xy">微信用户一键登录</button>
+
+<checkbox bindchange="onAgreeChange" class="text-xy" checked="{{isAgree}}">同意用户协议</checkbox>
+
+
+<view>{{userInfo.nickName}}</view>
+  
+
+

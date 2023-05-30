@@ -1,0 +1,38 @@
+/**index.wxss**/
+
+.userimage {
+  width: 120px;
+  height: 120px;
+  margin-left: 100px;
+  margin-right: 100px;
+  background-color: white;
+}
+.userinfo-id {
+  margin-top: 10px;
+  margin-left: 110px;
+  color: gray;
+  font-size: 12px;
+}
+
+
+.button_collect{
+  margin-top: 40px;
+  height: 38px;
+  background-color: rgb(208, 236, 234);
+}
+
+.button_mywork{
+  margin-top: 10px;
+  height: 38px;
+  background-color: rgb(208, 236, 234);
+}
+
+.my-image{
+  width: 25px;
+  height: 25px;
+}
+
+.my-text{
+  font-size: 13px;
+}
+

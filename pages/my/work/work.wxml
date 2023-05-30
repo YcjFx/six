@@ -1,0 +1,19 @@
+<!--pages/page2/page2.wxml-->
+<view class="container1">
+<text>我的推荐\n</text>
+
+<text>作品数: </text>
+<text>{{workCount}}</text>
+</view>
+<!-- 数据列表 -->
+<scroll-view class="list-container" scroll-y="true">
+  <view bind:longpress="showMenu" class="list-item" wx:for="{{list}}" wx:key="index" data-index="{{index}}">
+    <image class="item-image" bindtap="shopPage" src="{{item.imageSrc}}"></image>
+    <view class="item-text">
+      <text class="item-title">{{item.title}}</text>
+      <text class="item-price">{{item.price}}</text>
+      <text class="item-eshop">{{item.eshop}}</text>
+    </view>
+  </view>
+</scroll-view>
+

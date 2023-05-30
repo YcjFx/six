@@ -1,0 +1,3 @@
+<!--pages/shop/shop.wxml-->
+<button bindtap="getInfo">发起GET请求</button>
+<button bindtap="postInfo">发起POST请求</button>

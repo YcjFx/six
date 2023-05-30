@@ -1,0 +1,123 @@
+/* pages/publish/publish.wxss */
+.container1{
+  width: 93%;
+  height: 30px;
+  background-color: white;
+}
+/*取消*/
+.cancel{
+  color: black;
+  font-size: 13px;
+  margin-left: 5px;
+  /* background-color: cornflowerblue; */
+}
+/*发布*/
+.fabu{
+  color: black;
+  font-size: 13px;
+  margin-right: 5px;
+  /* background-color: cornflowerblue; */
+}
+
+/*商品名称输入框*/
+.container2{
+  width: 93%;
+  height: 20px;
+  font-size: 12px;
+  background-color: white;
+  margin-top: 5px;
+  margin-left: 5px;
+  margin-right: 5px;
+  border: 1px solid gray;
+}
+/*商品链接输入框*/
+.container3{
+  width: 93%;
+  height: 20px;
+  font-size: 12px;
+  background-color: white;
+  margin-top: 5px;
+  margin-left: 5px;
+  margin-right: 5px;
+  border: 1px solid gray;
+}
+/*商品详情输入框*/
+.container4{
+  width: 93%;
+  height: 60px;
+  font-size: 12px;
+  background-color: white;
+  margin-top: 5px;
+  margin-left: 5px;
+  margin-right: 5px;
+  border: 1px solid gray;
+}
+/*上传图片*/
+.upload{
+  width: 50px;
+  height: 50px;
+  background: rgba(196, 196, 196, 0.3);
+  margin-top: 10px;
+  margin-left: 50px;
+  border-radius:22px;
+  text-align: center;
+}
+.upload_text{
+  margin-top: 5px;
+  position: relative;
+  font-size: 33px;
+}
+.fuzhu_text{
+  margin-top: 5px;
+  margin-left: 20px;
+  position: relative;
+  font-size: 13px;
+}
+
+/*左侧价格和分类图标格式*/
+.tubiao{
+  width: 15px;
+  height: 15px;
+  margin-left: 10px;
+}
+
+/*价格和分类文字格式*/
+.wenzi{
+  font-size: 13px;
+  margin-left: 10px;
+}
+
+/*价格*/
+.price{
+  width: 93%;
+  height: 100rpx;
+  margin-top: 5px;
+  margin-left: 5px;
+  display: flex;
+}
+
+/*金额格式*/
+.number{
+  font-size: 16px;
+  margin-left: 100px;
+  margin-right: 5px;
+  color: rgb(240, 148, 28);
+}
+
+/*分类*/
+.classify{
+  width: 93%;
+  height: 50px;
+  margin-top: 5px;
+  margin-left: 5px;
+  display: flex;
+}
+
+.shop{
+  width: 120px;
+  height: 30px;
+  font-size: 12px;
+  color: gray;
+}
+
+
