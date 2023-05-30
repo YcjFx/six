@@ -1,4 +1,4 @@
-// pages/page2/page2.js
+// pages/my/my/work/work/work.js
 Page({
   data: {
     workCount: 1,
