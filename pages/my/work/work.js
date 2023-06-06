@@ -1,4 +1,4 @@
-// pages/my/my/work/work/work.js
+// pages/page2/page2.js
 Page({
   data: {
     workCount: 1,
@@ -67,7 +67,7 @@ Page({
         var list = []; // 定义一个空列表
         for (var i = 0; i < data.length; i++) {
           var item = {
-            imageSrc: data[i].imageSrc, // 将返回的 JSON 数据中的 img 属性赋值给 imageSrc 属性
+            imageSrc: data[i].imageSrc, 
             title: data[i].title, // 将返回的 JSON 数据中的 name 属性赋值给 title 属性
             price: data[i].price + '元', // 将返回的 JSON 数据中的 price 属性赋值给 price 属性，并添加单位
             eshop: data[i].eshop // 将返回的 JSON 数据中的 shop 属性赋值给 eshop 属性
@@ -124,4 +124,6 @@ Page({
       }
     });
   }
+
+
 })

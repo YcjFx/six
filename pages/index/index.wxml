@@ -1,9 +1,10 @@
 <!--index.wxml-->
 
 <view class="search-box">
-  <input class="search-input" placeholder="请输入搜索内容" bindinput="onInputChange"/>
+  <input class="search-input" type="text" placeholder="请输入搜索内容" bindinput="onInputChange"/>
   <button class="search-btn" bindtap="onSearch">搜索</button>
 </view>
+
 
 <scroll-view class="menu-bar" scroll-x="true">
   <view class="menu-item {{currentTab == 0 ? 'active' : ''}}" bindtap="switchTab" data-tab="0">综合</view>

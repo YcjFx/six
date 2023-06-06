@@ -26,14 +26,49 @@ Page({
     ],
 
   },
-  onInputChange: function(e) {
+  onInputChange: function(event) {
     this.setData({
-      searchValue: e.detail.value
+      searchValue: event.detail.value
     })
   },
+
+
+
   onSearch: function() {
     // 在这里编写搜索逻辑
-    console.log('搜索关键词：', this.data.searchValue)
+    // console.log('搜索关键词：', this.data.searchValue)
+    var that = this; // 保存当前函数的作用域
+    const searchdata=this.data.searchValue;
+
+    wx.request({
+      url: 'http://127.0.0.1:5000/search',
+      method: 'POST',
+      header: {
+        'Content-Type': 'application/json'
+      },
+      data: {
+        searchdata: searchdata,
+      },
+      success: function(res) {
+        console.log(res.data);
+        var data = res.data.data; // 获取返回的 JSON 数据中的 data 列表
+        var list = []; // 定义一个空列表
+        for (var i = 0; i < data.length; i++) {
+          var item = {
+            imageSrc: data[i].imageSrc, // 将返回的 JSON 数据中的 img 属性赋值给 imageSrc 属性
+            title: data[i].title, // 将返回的 JSON 数据中的 name 属性赋值给 title 属性
+            price: data[i].price + '元', // 将返回的 JSON 数据中的 price 属性赋值给 price 属性，并添加单位
+            eshop: data[i].eshop // 将返回的 JSON 数据中的 shop 属性赋值给 eshop 属性
+          };
+          list.push(item); // 将每个 item 添加到列表中
+        }
+
+        that.setData({
+          list: list // 更新前端页面中的商品列表
+        });
+      }
+    });
+
   },
 
   //菜单栏响应
