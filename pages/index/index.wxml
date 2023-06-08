@@ -8,8 +8,6 @@
 
 <scroll-view class="menu-bar" scroll-x="true">
   <view class="menu-item {{currentTab == 0 ? 'active' : ''}}" bindtap="switchTab" data-tab="0">综合</view>
-  <!-- <view class="menu-item {{currentTab == 1 ? 'active' : ''}}" bindtap="switchTab" data-tab="1">选项二</view>
-  <view class="menu-item {{currentTab == 2 ? 'active' : ''}}" bindtap="switchTab" data-tab="2">选项三</view> -->
 </scroll-view>
 
 
@@ -21,6 +19,7 @@
       <text class="item-title">{{item.title}}</text>
       <text class="item-price">{{item.price}}</text>
       <text class="item-eshop">{{item.eshop}}</text>
+      <text class="item-time">爆料时间：{{item.date}}</text>
     </view>
   </view>
 </scroll-view>

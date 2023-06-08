@@ -10,18 +10,21 @@ Page({
         title: 'Markless男士羽绒服',
         price: '192元',
         eshop: '京东',
+        date:'01-01'
       },
       {
         imageSrc: '/images/shop2.png',
         title: 'Baleno班尼路情侣款卫衣',
         price: '178元',
-        eshop: '拼多多'
+        eshop: '拼多多',
+        date:'01-01'
       },
       {
         imageSrc: '/images/shop3.png',
         title: 'Marden马登男士工作外套',
         price: '177元',
         eshop: '淘宝',
+        date:'01-01'
       }
     ],
 
@@ -58,7 +61,8 @@ Page({
             imageSrc: data[i].imageSrc, // 将返回的 JSON 数据中的 img 属性赋值给 imageSrc 属性
             title: data[i].title, // 将返回的 JSON 数据中的 name 属性赋值给 title 属性
             price: data[i].price + '元', // 将返回的 JSON 数据中的 price 属性赋值给 price 属性，并添加单位
-            eshop: data[i].eshop // 将返回的 JSON 数据中的 shop 属性赋值给 eshop 属性
+            eshop: data[i].eshop,// 将返回的 JSON 数据中的 shop 属性赋值给 eshop 属性
+            date:data[i].date
           };
           list.push(item); // 将每个 item 添加到列表中
         }
@@ -110,7 +114,8 @@ Page({
             imageSrc: data[i].imageSrc, // 将返回的 JSON 数据中的 img 属性赋值给 imageSrc 属性
             title: data[i].title, // 将返回的 JSON 数据中的 name 属性赋值给 title 属性
             price: data[i].price + '元', // 将返回的 JSON 数据中的 price 属性赋值给 price 属性，并添加单位
-            eshop: data[i].eshop // 将返回的 JSON 数据中的 shop 属性赋值给 eshop 属性
+            eshop: data[i].eshop, // 将返回的 JSON 数据中的 shop 属性赋值给 eshop 属性
+            date:data[i].date
           };
           list.push(item); // 将每个 item 添加到列表中
         }

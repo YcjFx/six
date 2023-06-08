@@ -23,7 +23,14 @@
 <text class="commodity-comment"></text>
 <text>\n</text>
 
-
+<text>\n</text>
+<text>价格曲线</text>
+<text>\n</text>
+<view>
+  <text>价格/￥</text>
+  <canvas canvas-id="line-chart" style="width: 100%; height: 150px;"></canvas>
+</view>
+<text>\n</text>
 
 <view class="value-buttons" style="display:flex;flex-direction:row;">
  <button bindtap="disableButtons" class="btn {{disabled ? 'btn-disabled' : ''}}" style="flex:3;" disabled="{{disabled}}" data-index="1">值</button>
@@ -39,11 +46,10 @@
 
 
 <view class="imageandbutton" style="display:flex;flex-direction:row;">
-  <view  style="flex:5;" > </view>
+  <view  style="flex:8;" > </view>
   <text style="flex:2;">收藏</text>
   <image class="collect-flag" style="flex:1;" src="{{imageCollect}}" bindtap="onCollectTap"></image>
   <view  style="flex:1;" > </view>
-  <button class="url-button" bindtap="onNavigateToW" style="flex:2;">前往购买</button>
 </view>
 
 

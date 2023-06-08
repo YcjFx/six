@@ -1,4 +1,7 @@
 // pages/shop/home.js
+
+// const wxCharts = require('wx-charts');
+
 Page({
 
   /**
@@ -30,7 +33,51 @@ Page({
     // 评论区
     comments: ['很nice','非常值得买'], // 评论列表
     inputValue: '', // 输入框的值
+
+
+    chartData: {
+      categories: ['01-01', '01-02', '01-03', '01-04', '01-05', '01-06'],
+      series: [10, 20, 5, 15, 30, 25]
+    },
   },
+
+  onReady: function () {
+    const chartData = this.data.chartData;
+    const context = wx.createCanvasContext('line-chart');
+    const canvasWidth = wx.getSystemInfoSync().windowWidth;
+    const canvasHeight = 120;
+    const padding = 20;
+
+    const maxPrice = Math.max(...chartData.series);
+    const minPrice = Math.min(...chartData.series);
+
+    const yRatio = (canvasHeight - padding * 2) / (maxPrice - minPrice);
+    const xRatio = (canvasWidth - padding * 2) / (chartData.categories.length*1.1 - 1);
+
+    context.beginPath();
+    context.setStrokeStyle('#FFA500');
+    context.setLineWidth(2);
+
+    for (let i = 0; i < chartData.categories.length; i++) {
+      const x = i * xRatio + padding;
+      const y = canvasHeight - ((chartData.series[i] - minPrice) * yRatio + padding);
+
+      if (i === 0) {
+        context.moveTo(x, y);
+      } else {
+        context.lineTo(x, y);
+      }
+
+      context.fillText(chartData.categories[i], x - 10, canvasHeight - padding + 20);
+      context.fillText(chartData.series[i], x - 10, y - 10);
+    }
+
+    context.stroke();
+    context.draw();
+  },
+
+
+
 
   changeText: function() {
     this.setData({
@@ -167,12 +214,12 @@ Page({
     });
   },
   
-  onNavigateToW: function() {
-    wx.redirectTo({
-      //跳转链接
-      url: 'http://www.baidu.com/',
-    });
-  },
+  // onNavigateToW: function() {
+  //   wx.redirectTo({
+  //     //跳转链接
+  //     url: 'http://www.baidu.com/',
+  //   });
+  // },
 
   //页面加载
   onLoad(options) {
@@ -197,6 +244,7 @@ Page({
         var ispercentage=res.data.percentage_data.ispercentage;
         var nopercentage=res.data.percentage_data.nopercentage;
         var iscollect=res.data.iscollect;
+        var chartData=res.data.chartData;
 
         if(iscollect==true){
           that.setData({
@@ -205,6 +253,7 @@ Page({
             isRadio: ispercentage,// 更新前端页面中的商品列表
             notRadio: nopercentage,
             imageCollect: '/images/tabs/collect_active.png',
+            chartData:chartData,
           });
         }
         else{
@@ -213,7 +262,8 @@ Page({
             comments:comments,
             isRadio: ispercentage,// 更新前端页面中的商品列表
             notRadio: nopercentage,
-            imageCollect: '/images/tabs/collect.png'
+            imageCollect: '/images/tabs/collect.png',
+            chartData:chartData,
           });
         }
       },
