@@ -102,3 +102,9 @@
   font-size: 14px;
   color: #999;
 }
+
+.mycollect{
+  font-size: 18px;
+  color: rgb(71, 71, 71);
+  text-align: center;
+}

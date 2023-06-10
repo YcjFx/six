@@ -1,5 +1,5 @@
 <!--pages/my/recommendation.wxml-->
-<text>收藏\n</text>
+<text class="mycollect">我的收藏\n</text>
 <!-- 数据列表 -->
 <scroll-view class="list-container" scroll-y="true">
   <view bind:longpress="showMenu" class="list-item" wx:for="{{list}}" wx:key="index" data-index="{{index}}">
