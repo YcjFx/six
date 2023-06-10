@@ -3,12 +3,13 @@ Page({
   data: {
     searchValue: '',
     currentTab: 0  , // 当前菜单栏选中的选项索引
+
     list: [
       {
         imageSrc: '/images/shop1.png',
         title: 'Markless男士羽绒服',
         price: '192元',
-        eshop: '京东',
+        eshop: '京东 ',
         date:'01-01'
       },
       {
