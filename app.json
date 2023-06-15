@@ -1,83 +1,15 @@
 {
-  "pages": [
-    "pages/log_in/log_in",
-    "pages/index/index",
-    "pages/shop/shop",
-    "pages/index/commodity/commodity",
+  "pages":[
     "pages/publish/publish",
-    "pages/my/my",
-    "pages/my/work/work",
-    "pages/my/collect/collect",
-
-    "pages/test/test",
+    "pages/log_in/log_in",
     "pages/logs/logs"
   ],
-  "window": {
-    "backgroundTextStyle": "dark",
-    "navigationBarBackgroundColor": "#15afca",
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#ffffff",
     "navigationBarTitleText": "暨大值得买",
-    "navigationBarTextStyle": "white",
-    "backgroundColor": "#15afca",
-    "onReachBottomDistance": 100
-  },
-  "tabBar": {
-    "list": [{
-      "pagePath": "pages/index/index",
-      "text": "主页",
-      "iconPath": "/images/tabs/home.png",
-      "selectedIconPath": "/images/tabs/home-active.png"
-    },{
-      "pagePath": "pages/publish/publish",
-      "text": "发布",
-      "iconPath": "/images/tabs/add.png",
-      "selectedIconPath": "/images/tabs/add-active.png"
-    },{
-      "pagePath": "pages/my/my",
-      "text": "我的",
-      "iconPath": "/images/tabs/my.png",
-      "selectedIconPath": "/images/tabs/my-active.png"
-    }]
+    "navigationBarTextStyle":"black"
   },
   "style": "v2",
-  "sitemapLocation": "sitemap.json",
-
-  "permission": {
-    "scope.userLocation": {
-      "desc": "获取用户地理位置信息"
-    },
-    "scope.userInfo": {
-      "desc": "获取用户信息"
-    },
-    "scope.userLocationBackground": {
-      "desc": "获取用户后台定位"
-    },
-    "scope.record": {
-      "desc": "使用录音功能"
-    },
-    "scope.camera": {
-      "desc": "使用相机"
-    },
-    "scope.album": {
-      "desc": "访问相册"
-    },
-    "scope.writePhotosAlbum": {
-      "desc": "保存到相册"
-    },
-    "scope.werun": {
-      "desc": "获取微信运动步数"
-    },
-    "scope.address": {
-      "desc": "获取收货地址"
-    },
-    "scope.invoiceTitle": {
-      "desc": "获取发票抬头"
-    },
-    "scope.invoice": {
-      "desc": "获取发票"
-    },
-    "scope.login": {
-      "desc": "登录"
-    }
-  }
-
+  "sitemapLocation": "sitemap.json"
 }
